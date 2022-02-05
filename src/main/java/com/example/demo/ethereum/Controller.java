@@ -65,7 +65,10 @@ public class Controller {
 	        System.out.println(msg.intValue());
 	        return msg.intValue();
 	  }
-
+	 @GetMapping("all")
+	 public  List<Contrat> sayHello() {
+		 return contratservice.getContratById();
+		 }
 	    @GetMapping("/getmy")
 	    public ResponseEntity<List<Contract>> getContracts() throws Exception {
 	    	int lenght = getCountContract();
@@ -106,15 +109,15 @@ public class Controller {
 	
 	    }
 	        
-	        @PostMapping("save")
-	        public Contract save(@RequestBody Recevier r ) throws Exception {
-	        	Contract c1=new Contract();
-	        	c1.setCout(BigInteger.valueOf((long) r.getC().getCout()));
-	        	c1.setId(r.getC().getImmobilier().getId());
-	        	c1.setOwner(r.getA().getAddress());
+	    //    @PostMapping("save")
+	       // public Contrat save(@RequestBody Contrat r ) throws Exception {
+	        	//Contract c1=new Contract();
+	        	//c1.setCout(BigInteger.valueOf((long) r.getC().getCout()));
+	        	//c1.setId(r.getC().getImmobilier().getId());
+	        	//c1.setOwner(r.getA().getAddress());
 	        	
-	        	((Controller) contratservice).createContract(c1);
-	        	return c1;}
+	        //	((Controller) contratservice).createContract(r);
+	        //	return r;}
 	        }  
 
 

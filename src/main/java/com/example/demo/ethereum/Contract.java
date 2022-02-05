@@ -10,11 +10,11 @@ public class Contract {
 	public Contract() {
 		// TODO Auto-generated constructor stub
 	}
-	public Contract(String bigInteger,String owner, BigInteger bigInteger2) {
+	public Contract(String id,String owner, BigInteger cout) {
 		super();
-		this.id = bigInteger;
+		this.id = id;
 		this.owner = owner;
-		this.cout = bigInteger2;
+		this.cout = cout;
 	}
 	public String getId() {
 		return id;

@@ -50,8 +50,8 @@ public class ContratServiceImp implements ContratService{
 
 	@Override
 	public List<Contrat> getContratById() {
-		// TODO Auto-generated method stub
-		return null;
+	
+		return 	crep.findAll();
 	}
 
 }
