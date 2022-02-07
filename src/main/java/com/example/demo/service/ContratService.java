@@ -6,8 +6,6 @@ import com.demo.ethereum.entities.Contrat;
 
 public interface ContratService {
 public Contrat CreeContrat(Contrat cl);
-public Contrat update(Contrat cl);
-public void delete(int id);
-public Contrat getContratById(Contrat cl);	
+public Contrat getContratById(String cl);	
 public List<Contrat> getContratById();	
 }
